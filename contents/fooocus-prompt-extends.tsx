@@ -1,4 +1,4 @@
-import cssText from "data-text:~/content.css"
+import cssText from "data-text:~/contents/fooocus-prompt-extends.css"
 import type { PlasmoCSConfig, PlasmoGetInlineAnchor } from "plasmo"
 
 import { FooocusPromptExtends } from "~components/FooocusPromptExtends"
