@@ -1,6 +1,6 @@
 ## Fooocus Prompt Extends
 
-This extension was created to add the functionality to fooocus to auto-configure prompts and other features from more user-friendly options, avoiding having to copy and paste every time you need it. For now it only supports the pony_v6 model, but later it will support other models. Any help would be appreciated :smile:
+This browser extension was created to add the functionality to fooocus to auto-configure prompts and other features from more user-friendly options, avoiding having to copy and paste every time you need it. For now it only supports the pony_v6 model, but later it will support other models. Any help would be appreciated 😄
 
 ## Getting Started
 
@@ -37,8 +37,11 @@ When you click on it, a modal appears with different configurations
 Each configuration allows you to add variables to the prompt to obtain different results:
 
 ### Model:
+
     - pony_v6: Pony Diffusion V6 is a versatile SDXL finetune capable of producing stunning SFW and NSFW visuals of various anthro, feral, or humanoids species and their interactions based on simple natural language prompts.
-### Type: 
+
+### Type:
+
     - anime: The image features anime style
     - anime advance: Similar to anime but with a little more detail
     - pony: The image features pony style
@@ -46,11 +49,15 @@ Each configuration allows you to add variables to the prompt to obtain different
     - cartoon: The image features cartoon style
     - realistic 1: The image features realistic style
     - realistic 2: The image features realistic style
+
 ### Censure:
+
     - safe: Safe content
     - questionable: Questionable content
     - explicit: Explicit content
-### Pose: 
+
+### Pose:
+
     - none: No pose
     - from below: Pose from below
     - from above: Pose from above
@@ -66,3 +73,5 @@ Once you have your configuration, by clicking on "insert", all the necessary con
 ![image](./docs/003.png)
 
 All that remains is to write what you want to do. You can play around by changing the settings both from options and in the prompt itself.
+
+![image](./docs/004.png)
