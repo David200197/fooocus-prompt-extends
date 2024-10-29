@@ -26,6 +26,7 @@ export const PonyV6 = () => (
       <option value="upper body">upper body</option>
       <option value="portrait">portrait</option>
       <option value="contrapposto">contrapposto</option>
+      <option value="full body">full body</option>
     </select>
   </>
 )
