@@ -7,10 +7,12 @@
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
-    "package": "plasmo package"
+    "package": "plasmo package",
+    "generate-styles-code": "node scripts/generate-styles-code.mjs"
   },
   "dependencies": {
-    "plasmo": "0.89.3",
+    "@swc/types": "^0.1.17",
+    "plasmo": "0.89.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -26,6 +28,17 @@
   "manifest": {
     "host_permissions": [
       "https://*/*"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/styles-codes/*.jpeg",
+          "assets/styles-codes"
+        ],
+        "matches": [
+          "http://127.0.0.1:7865/*"
+        ]
+      }
     ]
   }
 }

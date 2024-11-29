@@ -1,6 +1,5 @@
 import type { SyntheticEvent } from "react"
 
-import { PonyV6 } from "~components/PonyV6"
 import { typePrompt } from "~utils/type-prompt"
 
 import type { Form } from "./form.interface"
@@ -12,8 +11,6 @@ export class PonyV6Form implements Form {
   private PROMPT_NEGATIVE_PROMPT =
     "score_6, score_5, score_4, derpibooru_p_low, lowres, bad anatomy, bad hands, text, cropped, worst quality, low quality, jpeg artifacts, signature, watermark, username, blurry, artist name, mosaic censoring, twitter username, logo, limited palette, monochrome, (Blurred poorly drawn eyes), (out of frame), (bad quality eyes), (asymmetric eyes), long neck, elongated neck, blurred eyes, undetailed eyes, ugly face, blurred, grainy, cut off, oversharpened, sign, amateur, extra limbs, dull colours, boring, lacklustre, bad art, text, abominations, more than 2 legs, more than 2 hand, fused hands, bad proportions,colorless, glitch, bad face, distorted face, messed up eyes, deformed, extra limb, extra finger, bad hands, broken finger, black and white, chromatic abberation, artifacts, ugly, bad image"
 
-  public build = PonyV6
-
   public onSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
 
@@ -24,6 +21,7 @@ export class PonyV6Form implements Form {
     const source = formData.get("source") as string
     const censure = formData.get("censure") as string
     const pose = formData.get("pose") as string
+    const code = formData.get("code") as string
     const promptSource = this.getPromptSource(source)
     const negativePromptSource = this.getNegativePromptSource(source)
 
@@ -31,7 +29,8 @@ export class PonyV6Form implements Form {
       this.PROMPT,
       censure,
       pose,
-      promptSource
+      promptSource,
+      code
     ])
     typePrompt(`#negative_prompt > label > textarea`, [
       this.PROMPT_NEGATIVE_PROMPT,

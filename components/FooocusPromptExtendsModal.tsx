@@ -1,6 +1,9 @@
 import { useRef, useState } from "react"
 
-import { generateForm } from "~forms/generate-form"
+import { generateFormControl } from "~forms/generate-form-control"
+
+import { FormModel } from "./FormModel"
+import { PonyV6 } from "./PonyV6"
 
 type Props = { show: boolean; onClose: () => void }
 export const FooocusPromptExtendsModal = ({ show, onClose }: Props) => {
@@ -8,7 +11,7 @@ export const FooocusPromptExtendsModal = ({ show, onClose }: Props) => {
 
   if (!show) return <></>
 
-  const formModel = generateForm(model)
+  const formModelControl = generateFormControl(model)
 
   return (
     <div className="fooocus-prompt-extends-background" onClick={onClose}>
@@ -28,10 +31,10 @@ export const FooocusPromptExtendsModal = ({ show, onClose }: Props) => {
         <form
           onSubmit={(e) => {
             onClose()
-            formModel.onSubmit(e)
+            formModelControl.onSubmit(e)
           }}
           style={{ display: "flex", flexDirection: "column" }}>
-          {formModel.build()}
+          {<FormModel model={model} />}
 
           <div
             style={{
