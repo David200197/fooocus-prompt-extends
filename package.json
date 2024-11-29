@@ -32,8 +32,7 @@
     "web_accessible_resources": [
       {
         "resources": [
-          "assets/styles-codes/*.jpeg",
-          "assets/styles-codes"
+          "assets/styles-codes/*.jpeg"
         ],
         "matches": [
           "http://127.0.0.1:7865/*"
