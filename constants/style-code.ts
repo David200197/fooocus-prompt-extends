@@ -8,7 +8,7 @@ export const STYLE_CODE: string[] = [
   "1dr",
   "2bd",
   "2dr",
-  "2rm,8u,4rt",
+  "2rm,8um,4rt",
   "2rm",
   "2wf",
   "3yne",
